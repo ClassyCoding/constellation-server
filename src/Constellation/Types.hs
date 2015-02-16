@@ -10,8 +10,6 @@ import           Control.Monad.Logger
 import           Control.Monad.Reader
 import           Control.Monad.Trans.Resource
 
-data Error = Error
-
 data Environment = Environment
 
 newtype Constellation a = Constellation { unConstellation :: ResourceT (ReaderT Environment (LoggingT IO)) a }
